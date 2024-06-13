@@ -1,0 +1,123 @@
+# ----- Level mp_7405 ---------------------------
+# Designer: Muhammad Assad, June 13th, 2024
+# Goals: Mirror + Bookshelf + Locks
+# Target Difficulty: Hard
+
+win=book 15
+win=mirror 2
+win=locks
+
+lose=moves 20
+
+# ----- Star/Points Targets ----------------
+
+star=1000		
+star=5000		
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyv
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+
+weights=16 16 16 16 16  
+
+# ----- The Gameboard ----------------------
+
+row=+RRR+RRR+
+row=RRRRRRRRR
+row=RR+RRR+RR
+row=RR+RRR+RR
+row=RRRRRRRRR
+row=RR+RRR+RR
+row=RR+RRR+RR
+row=RRRRRRRRR
+row=+RRR+RRR+
+
+book=.........
+book=11.......
+book=11.......
+book=.........
+book=.........
+book=.........
+book=.......22
+book=.......22
+book=.........
+
+book_color1=rybyv
+book_color2=bvgbr
+
+mirror.1.coord=7,1
+mirror.1.color=r
+mirror.1.count=20
+
+mirror.2.coord=2,8
+mirror.2.color=b
+mirror.2.count=20
+
+lock=.........
+lock=.........
+lock=....1....
+lock=....2....
+lock=.3.4.5.6.
+lock=....7....
+lock=....8....
+lock=.........
+lock=.........
+
+boost=.........
+boost=...1.1...
+boost=........1
+boost=.........
+boost=....1....
+boost=.........
+boost=1........
+boost=....1....
+boost=..1...1..
+
+# ------- Special Rules ------------
+
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+

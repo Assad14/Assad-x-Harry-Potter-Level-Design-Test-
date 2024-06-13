@@ -1,0 +1,154 @@
+# ----- Level mp_7151 ---------------------------
+# Designer: Muhammad Assad, June 13th, 2024
+# Goals: Candles + Mandrakes + Leaves
+# Spells Used: Accio Chatterung Teeth + Tergeo
+# Target Difficulty: Easy
+
+win=mud
+win=mandrake 4
+win=collect
+
+lose=moves 25
+
+# ----- Star/Points Targets ----------------
+
+star=1000		
+star=5000		
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvwc
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.c=deadCandle|candle|true
+
+weights=16 16 16 16 16 20 0
+
+# ----- The Gameboard ----------------------
+
+row=.RRR.RRR.
+row=.RRR.RRR.
+row=.RRR.RRR.
+row=RRgbgbgRR
+row=RwbwbwbwR
+row=RRRRRRRRR
+row=.RRR.RRR.
+row=.RRR.RRR.
+row=.RRR.RRR.
+
+mud=.........
+mud=.........
+mud=.........
+mud=..12121..
+mud=..2.2.2..
+mud=...1.1...
+mud=.........
+mud=.........
+mud=.........
+
+mudVariant=leaves
+
+candle=.........
+candle=.........
+candle=.........
+candle=.1.....1.
+candle=.........
+candle=2.......2
+candle=.........
+candle=.........
+candle=.........
+
+mandrake=..44.44..
+mandrake=..44.44..
+mandrake=..22.22..
+mandrake=.........
+mandrake=.........
+mandrake=.........
+mandrake=.333.333.
+mandrake=.144.441.
+mandrake=.144.441.
+
+boost=.........
+boost=.1.....1.
+boost=.........
+boost=.........
+boost=1.......1
+boost=....1....
+boost=.........
+boost=.........
+boost=.........
+
+# ----- Collectable Items --------------------
+
+target.deadCandle.color=c
+target.deadCandle.goal=26
+target.deadCandle.type=flyto
+target.deadCandle.min=5
+target.deadCandle.max=7
+target.deadCandle.percent=100
+target.deadCandle.levelWeights=0 100
+target.deadCandle.rotateOnFlyTo=false
+target.deadCandle.flyToUI=CollectorMaster2
+target.deadCandle.dropColumnFilter=111111111
+
+# ----- Spell Rules ----------------------
+
+SpellTergeo.enabled=true
+
+SpellAccioChatteringTeeth.enabled=true
+SpellAccioChatteringTeeth.numPieces=4
+SpellAccioChatteringTeeth.castLimit=1
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=5
+
+# ------- Special Rules ------------
+
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+
